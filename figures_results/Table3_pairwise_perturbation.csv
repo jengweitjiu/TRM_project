@@ -1,0 +1,4 @@
+Rank,TF 1,TF 2,ΔDepth (Pair),Synergy,Expected (Additive),Stability (Pair)
+1,NFATC2(+),POU2F1(+),0.0,0.0,0.0,1.0
+2,NFATC2(+),RORA(+),0.0,0.0,0.0,1.0
+3,POU2F1(+),RORA(+),0.0,0.0,0.0,1.0

@@ -1,0 +1,28 @@
+# Large data files
+raw_data/
+*.h5ad
+*.h5seurat
+*.feather
+*.tar
+*.gz
+
+# SCENIC databases
+GRN_SCENIC/motifs-v9-nr.hgnc-*
+GRN_SCENIC/hg38__*
+GRN_SCENIC/hg38_10kb.*
+
+# R session
+.RData
+.Rhistory
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc

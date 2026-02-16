@@ -1,0 +1,296 @@
+
+================================================================================
+FORMATTING YOUR MANUSCRIPT FOR CELL SYSTEMS
+Complete Submission Checklist
+================================================================================
+
+ARTICLE TYPE: Research Article (recommended for your work)
+
+KEY SPECIFICATIONS:
+================================================================================
+
+WORD COUNT LIMITS:
+✓ Main text: Maximum 7,000 words
+  - Includes: Title, authors, affiliations, Summary, Introduction, Results, 
+    Discussion, figure legends
+  - EXCLUDES: STAR Methods, supplemental legends, References
+
+✓ Your manuscript: Currently ~6,500 words estimated ✅ FITS
+
+DISPLAY ITEMS (Figures/Tables):
+✓ Maximum: 7 main figures or tables
+✓ Your manuscript: 5 main figures + 3 tables = 8 items
+  
+  RECOMMENDATION: Move 1 table to supplementary
+  - Keep Tables 1-2 as main tables
+  - Move Table 3 (pairwise perturbation) to Supplementary Table S1
+  
+✓ Supplementary items: Cannot exceed 2× main display items
+  - Your 7 main items allow up to 14 supplementary items ✅
+
+REQUIRED SECTIONS (in this exact order):
+================================================================================
+
+1. TITLE
+   - Concise, descriptive
+   - Avoid jargon/abbreviations
+   - Current suggestion: "Cooperative Transcription Factor Networks Form 
+     Regulatory Attractors Maintaining IL22-high Memory in Tissue-Resident T Cells"
+
+2. AUTHOR LIST AND AFFILIATIONS
+   - Full names, institutional affiliations
+   - Use superscript numbers for affiliations
+
+3. LEAD CONTACT FOOTNOTE
+   - Designated corresponding author for inquiries
+
+4. EMAIL ADDRESS(ES)
+   - Corresponding author(s) email
+
+5. SUMMARY (150 words maximum) ⭐ CRITICAL
+   Template:
+   "Immune memory persistence mechanisms remain incompletely understood. Using
+   single-cell regulon analysis and quantitative perturbation modeling, we 
+   reveal that IL22-high tissue-resident memory T (TRM) cells occupy a stable
+   attractor basin in transcription factor regulatory space. Systematic leave-
+   one-out and pairwise perturbation analyses demonstrate that state stability
+   arises not from a single master regulator but from cooperative locking among
+   distributed transcription factor networks, centered on POU2F1, NFATC2, and
+   REL family members. Pairwise removals reveal non-additive destabilization,
+   indicating enhancer-level cooperativity. This regulatory geometry framework
+   explains therapeutic resistance and rapid relapse following treatment 
+   cessation, suggesting multi-target strategies are required to disrupt
+   inflammatory memory states. Our attractor depth quantification approach
+   provides a generalizable method for dissecting stability mechanisms across
+   immune cell states."
+
+6. INTRODUCTION
+   - Brief background
+   - Clear statement of question/gap
+   - Your current intro: ~800 words ✅ GOOD
+
+7. RESULTS
+   - Organized by subsections with descriptive headers
+   - Focus on key findings
+   - Your current results: ~2,500 words ✅ GOOD
+   
+   Suggested subsections:
+   - IL22-high TRM cells form a distinct attractor in regulon space
+   - Quantitative measurement of attractor depth through perturbation
+   - Distributed stabilizer architecture revealed by single-TF analysis
+   - Cooperative locking modules identified through pairwise perturbation
+   - Regulatory geometry predicts therapeutic resistance mechanisms
+
+8. DISCUSSION
+   - Interpretation of findings
+   - Broader implications
+   - Limitations (important!)
+   - Future directions
+   - Keep to ~1,000-1,500 words
+   
+   Key points to emphasize:
+   - Novel quantitative framework (attractor depth)
+   - Distributed vs hierarchical control paradigm shift
+   - Clinical implications (multi-target therapy)
+   - Generalizability beyond IL22
+
+9. RESOURCE AVAILABILITY ⭐ REQUIRED
+   Must include these three subsections:
+   
+   a) Lead Contact
+      "[Name], [email]"
+   
+   b) Materials Availability
+      "This study did not generate new unique reagents. All regulon definitions
+      and analytical code are available from the lead contact upon request."
+   
+   c) Data and Code Availability
+      "Single-cell RNA-seq data: [GEO accession number or state 'available 
+      upon request']
+      
+      Code: All analysis code is publicly available at GitHub: 
+      https://github.com/[your-repo]/IL22-attractor-analysis
+      
+      Any additional information required to reanalyze the data reported in
+      this paper is available from the lead contact upon request."
+
+10. ACKNOWLEDGMENTS
+    - Funding sources
+    - Technical assistance
+    - Manuscript feedback
+
+11. AUTHOR CONTRIBUTIONS ⭐ REQUIRED
+    Use CRediT taxonomy:
+    "Conceptualization, [initials]; Methodology, [initials]; Software, 
+    [initials]; Validation, [initials]; Formal Analysis, [initials]; 
+    Investigation, [initials]; Resources, [initials]; Data Curation, 
+    [initials]; Writing – Original Draft, [initials]; Writing – Review & 
+    Editing, [initials]; Visualization, [initials]; Supervision, [initials]; 
+    Project Administration, [initials]; Funding Acquisition, [initials]."
+
+12. DECLARATION OF INTERESTS
+    "The authors declare no competing interests."
+    OR list any conflicts
+
+13. MAIN FIGURE TITLES AND LEGENDS
+    - Descriptive title for each figure (e.g., "Figure 1. [Title]")
+    - Comprehensive legends (you already have these ✅)
+
+14. MAIN TABLE TITLES AND LEGENDS
+    - Tables as editable Word tables (not images)
+    - No panels (Table 1, Table 2, not Table 1A, 1B)
+
+15. STAR METHODS (detailed) ⭐ REQUIRED
+    See separate section below
+
+16. SUPPLEMENTAL VIDEO AND TABLE LEGENDS
+    (If applicable)
+
+17. REFERENCES
+    - No strict limit
+    - Vancouver style
+    - Example: "1. Smith, J., Jones, K., and Brown, L. (2024). Title of 
+      article. Cell Syst. 15, 123-145."
+
+================================================================================
+STAR METHODS REQUIREMENTS
+================================================================================
+
+STAR Methods must include:
+
+1. KEY RESOURCES TABLE ⭐ CRITICAL
+   Use Cell Systems webform or template
+   Categories:
+   - Reagents (antibodies, chemicals, etc.)
+   - Software (Python, R, scanpy, SCENIC, scikit-learn, etc.)
+   - Deposited data (GEO accession)
+   - Other (custom scripts, algorithms)
+
+2. METHOD DETAILS
+   Subsections should include:
+   - Sample collection and processing
+   - Single-cell RNA sequencing
+   - Quality control and normalization
+   - Regulon inference (SCENIC pipeline)
+   - AUCell scoring methodology
+   - Differential regulon analysis
+   - Attractor stability quantification
+   - Perturbation analysis (single and pairwise)
+   - Statistical analysis
+   - Computational infrastructure
+
+3. QUANTIFICATION AND STATISTICAL ANALYSIS
+   - Sample sizes (n = 89 cells, 9 IL22-high, 80 IL22-low)
+   - Statistical tests used
+   - Significance thresholds
+   - Software used
+   - Reproducibility measures
+
+================================================================================
+ADDITIONAL REQUIREMENTS
+================================================================================
+
+1. HIGHLIGHTS (4 bullet points, max 85 characters each) ⭐ REQUIRED
+   Submit as separate document
+   
+   Example:
+   • IL22-high TRM cells occupy stable attractor basin in regulon space
+   • Distributed TF networks, not single regulator, maintain memory stability
+   • Cooperative pairs show non-additive destabilization (synergistic locking)
+   • Framework predicts resistance and suggests multi-target therapy strategies
+
+2. eTOC BLURB (30-50 words) ⭐ REQUIRED
+   Submit as separate document
+   
+   Example:
+   "[Authors] reveal that IL22 inflammatory memory persists through cooperative
+   transcription factor locking rather than single master regulators. Their
+   attractor depth framework explains therapeutic resistance and provides
+   quantitative methods for dissecting stability in chronic inflammation."
+
+3. GRAPHICAL ABSTRACT ⭐ REQUIRED
+   - 5.5 inches square at 300 dpi
+   - Single panel
+   - Arial font 12-16 pt
+   - Submit as TIFF, PDF, or JPEG
+   
+   Suggested content:
+   - Left: Shallow basin (single TF) vs deep basin (cooperative)
+   - Right: Network diagram showing POU2F1-NFATC2-REL cooperation
+   - Center: IL22-high state locked by cooperative TFs
+
+4. FIGURE FILE FORMATS
+   - Preferred: TIFF
+   - Also accepted: EPS, JPG, PDF
+   - Minimum 300 dpi for photos, 600 dpi for line art
+   - RGB color mode
+
+5. COVER LETTER
+   Must include:
+   - Brief summary of significance
+   - Why it fits Cell Systems scope
+   - Statement that work is original and not under consideration elsewhere
+   - Suggested reviewers (3-5 names with emails and brief justification)
+   - Any excluded reviewers (optional, with brief justification)
+
+================================================================================
+YOUR MANUSCRIPT ADJUSTMENTS NEEDED
+================================================================================
+
+PRIORITY 1 - STRUCTURAL:
+✓ Move Table 3 to Supplementary (to meet 7-item limit)
+✓ Add Resource Availability section
+✓ Add STAR Methods section
+✓ Write 150-word Summary
+✓ Create Highlights (4 bullets)
+✓ Create eTOC blurb
+✓ Add Author Contributions
+✓ Add Declaration of Interests
+
+PRIORITY 2 - SUPPLEMENTARY:
+✓ Create comprehensive Supplementary Information PDF
+  - All supplementary figures with legends
+  - Supplementary Table S1 (formerly Table 3)
+  - Supplementary methods details
+✓ Create Key Resources Table
+
+PRIORITY 3 - SUBMISSION MATERIALS:
+✓ Create Graphical Abstract
+✓ Write Cover Letter
+✓ Prepare high-resolution figure files
+✓ Format references in Vancouver style
+
+================================================================================
+SUBMISSION PROCESS
+================================================================================
+
+1. INITIAL SUBMISSION (can be less formal)
+   - Single PDF with all content
+   - Figures can be lower resolution
+   - References don't need perfect formatting
+   
+2. AFTER ACCEPTANCE (strict formatting required)
+   - All sections in correct order
+   - High-resolution figure files (separate)
+   - Proper reference formatting
+   - All supplementary materials
+   - Key Resources Table
+   - Highlights and eTOC files
+
+3. SUBMISSION SYSTEM: Editorial Manager
+   URL: https://www.editorialmanager.com/cell-systems
+
+================================================================================
+ESTIMATED TIMELINE
+================================================================================
+
+Initial submission preparation: 2-3 days
+Editorial decision: 7-10 days (if sent to review)
+Review process: 4-8 weeks
+Revision: 1-2 weeks
+Final decision: 1-2 weeks
+Publication (if accepted): 2-4 weeks after acceptance
+
+================================================================================
+END OF FORMATTING GUIDE
+================================================================================

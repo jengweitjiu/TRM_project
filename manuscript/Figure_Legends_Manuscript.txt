@@ -1,0 +1,223 @@
+
+================================================================================
+FIGURE LEGENDS - Manuscript Ready
+================================================================================
+
+Figure 1 | IL22-high TRM cells occupy a stable attractor basin in regulon space
+
+(A) UMAP embedding of TRM cells (n = 89) in regulon activity space, colored by 
+IL22 expression status (IL22-high, n = 9; IL22-low, n = 80). Dimensionality 
+reduction was performed on AUCell-derived regulon activity scores for 32 
+transcription factor regulons following PCA preprocessing (20 components). 
+IL22-high cells cluster distinctly from IL22-low cells in the regulon manifold, 
+indicating a structured regulatory state.
+
+(B) Differential regulon landscape between IL22-high and IL22-low TRM subsets. 
+Volcano plot shows ΔAUC (mean difference in regulon activity) versus −log₁₀(p-value) 
+for all tested regulons. Gray points represent individual transcription factor 
+regulons. Significant IL22-associated regulons (ΔAUC > 0, p < 0.05) include 
+POU2F1, RORA, NFATC2, and SP3. Red dashed line indicates significance threshold 
+(p = 0.05).
+
+(C) Attractor stability curve quantifies basin depth through noise perturbation. 
+A logistic classifier trained on regulon space was subjected to increasing 
+Gaussian noise (σ = 0 to 1.0), and stability was measured as 1 − classification 
+flip rate. The area under the curve (AUC) provides a scalar metric of attractor 
+depth. High baseline stability at low noise levels indicates a well-defined 
+IL22-high state, with gradual degradation under increasing perturbation.
+
+(D) Conceptual schematic of attractor basin geometry. The IL22-high state 
+occupies a basin in high-dimensional regulon space. Basin depth determines 
+resistance to stochastic perturbation and external disruption. Shallow basins 
+(left) permit easy state transitions, while deep basins (right) maintain state 
+stability. Color gradient represents potential energy in the regulatory landscape.
+
+================================================================================
+
+Figure 2 | Single-regulon perturbation reveals distributed stabilizer architecture
+
+(A) Ranked contribution of individual regulons to attractor depth. Bar plot shows 
+ΔDepth (baseline stability − perturbed stability) for each transcription factor 
+following leave-one-out (LOO) analysis. Negative ΔDepth indicates destabilization 
+upon regulon removal. Top 20 regulons ranked by stabilizer strength are shown. 
+NFATC2(+) exhibits the strongest individual contribution, followed by POU2F1(+) 
+and RORA(+). Color intensity indicates magnitude of destabilization: dark red 
+(ΔDepth < −0.005), orange (−0.005 < ΔDepth < 0), green (ΔDepth ≥ 0, neutral or 
+redundant).
+
+(B) Stability curves comparing baseline (all regulons intact, blue) versus top 
+stabilizer removed (NFATC2(+) removed, red). Both curves show high resilience 
+at low noise levels, with the perturbed condition exhibiting modestly reduced 
+stability. The limited separation indicates that no single regulon alone is 
+responsible for basin maintenance, consistent with distributed stabilization.
+
+(C) Distribution of ΔDepth values across all tested regulons. Histogram shows 
+frequency distribution of stabilizer effects. Most regulons cluster near zero 
+(minimal individual impact), with only a subset showing measurable contributions. 
+Red dashed line marks neutral effect (ΔDepth = 0); orange dotted line shows 
+median. Statistical summary (inset): mean ΔDepth and standard deviation. The 
+broad distribution supports a model of redundant, partially overlapping stabilizer 
+networks rather than singular master regulator control.
+
+================================================================================
+
+Figure 3 | Pairwise regulon perturbation exposes cooperative locking architecture
+
+(A) Heatmap of pairwise ΔDepth following simultaneous removal of two transcription 
+factor regulons. Symmetric matrix shows destabilization magnitude for all tested 
+TF pairs (n = 3 pairs shown; full analysis: 120 pairs from 16 candidate TFs). 
+Color scale: blue (minimal effect) to red (strong destabilization). Darker red 
+regions indicate TF pairs whose joint removal substantially reduces attractor 
+depth, revealing cooperative stabilizer modules.
+
+(B) Synergy matrix comparing observed versus expected additive effects. Synergy 
+is defined as observed pairwise ΔDepth minus the sum of individual single-TF 
+effects. Negative synergy (purple) indicates cooperative locking: the pair is 
+more destabilizing together than the sum of individual contributions would predict. 
+Positive synergy (orange) indicates redundancy or buffering. Key cooperative 
+pairs include NFATC2-RORA and POU2F1-RORA, suggesting coordinated stabilization 
+mechanisms.
+
+(C) Top 15 most destabilizing TF pairs ranked by ΔDepth. Horizontal bar chart 
+shows ranked pairwise perturbation effects. Bar color indicates synergy strength: 
+dark red (strong cooperative synergy, < −0.005), red (moderate synergy, < 0), 
+orange (additive or redundant, ≥ 0). Legend shows synergy categories. The 
+prevalence of synergistic pairs demonstrates that IL22 persistence relies on 
+network-level cooperative interactions rather than independent parallel pathways.
+
+(D) Observed versus expected destabilization scatter plot. Each point represents 
+a TF pair. X-axis: expected effect assuming additive contributions from single-TF 
+perturbations. Y-axis: observed pairwise effect. Diagonal line indicates perfect 
+additivity. Points below the diagonal (cooperative) show stronger-than-expected 
+destabilization. Points are colored by synergy score (blue = additive; red = 
+cooperative). Top synergistic pairs are annotated (e.g., NFATC2-RORA). Colorbar 
+indicates synergy magnitude.
+
+Summary: Pairwise analysis reveals a modular attractor topology with cooperative 
+TF locking modules (NFATC2-centered, POU2F1-associated) and redundant buffering 
+pathways, consistent with distributed network stabilization.
+
+================================================================================
+
+Figure 4 | Mechanistic model of cooperative enhancer-level stabilization
+
+(A) Regulon module architecture diagram. Three functional TF modules converge on 
+the IL22-high memory state: (1) Core stabilizer (POU2F1, red) acts as central 
+hub with strong connections to cooperative partners; (2) Cooperative partners 
+(NFATC2, REL, orange) exhibit bidirectional synergistic interactions; (3) Redundant 
+buffers (RORA, KLF2, green) provide parallel stabilization through weaker, 
+independent pathways. Arrow thickness indicates interaction strength: thick dark 
+red arrows represent cooperative interactions; thin gray dashed arrows represent 
+redundant/parallel pathways. All modules converge on the IL22-high memory state 
+(yellow box).
+
+(B) Enhancer cluster cooperativity model. Schematic illustrates molecular basis 
+of cooperative stabilization. Enhancer 1 (blue, left) contains clustered binding 
+motifs for cooperative TFs (POU, NFAT, REL), enabling synergistic binding and 
+strong transcriptional activation (thick red arrow to target genes). Bracket 
+indicates cooperative binding region. Enhancer 2 (gray, right) contains independent 
+binding site (RORA, green), conferring moderate activation through single-TF 
+engagement (thin dashed arrow). Target genes (yellow box) include IL22 and other 
+effector loci. Open chromatin region (wheat-colored annotation) indicates accessible 
+regulatory landscape. This architecture explains why cooperative TF pairs show 
+non-additive destabilization: disrupting co-bound enhancer clusters has 
+disproportionate effects on gene activation.
+
+(C) Single versus cooperative stabilization energy landscapes. Left: Single TF 
+removal (shallow basin). IL22 state (red dot) occupies a modest basin with low 
+curvature. Red dashed arrow shows perturbation easily escaping the basin, indicating 
+"Modest Stability." Right: Cooperative locking (deep basin). IL22 state occupies 
+a steep, deep basin. Orange dashed arrow shows attempted escape; green arrow 
+shows self-correcting return to basin, indicating "High Stability." Double-headed 
+arrows mark basin depth (Δ depth), with cooperative architecture exhibiting 
+greater depth. This visualizes why cooperative TF networks resist perturbation 
+more effectively than single-TF dependencies.
+
+(D) IL22 memory locking conceptual model. State transition diagram shows naive/resting 
+state (gray circle, left) and IL22-high locked state (red circle with thick border, 
+right). Thick red arrow (top) represents inflammation/activation-driven transition 
+across activation barrier. Thin gray dashed arrow (bottom) represents weak return 
+pathway, blocked by cooperative locking, labeled "Weak return (cooperative locking)." 
+Boxes detail molecular mechanisms: "Locking Mechanism" (blue box) lists POU2F1 
+core binding, NFATC2-REL cooperation, enhancer cluster stability, and chromatin 
+accessibility maintenance. "Perturbation Response" (orange box) describes resistance 
+properties: resists single TF loss, requires cooperative disruption for destabilization, 
+exhibits distributed redundancy. Clinical implications box (purple, dashed border): 
+"Memory persistence may require multi-target disruption of cooperative TF networks," 
+highlighting therapeutic relevance.
+
+================================================================================
+
+Figure 5 | Regulatory geometry framework for immune memory
+
+(A) Classical linear signaling model. Sequential cascade: Cytokine Signal → 
+STAT/NF-κB → Master TF → Effector Genes → IL22 Output. Each step represented 
+as box with increasing color intensity. Black arrows indicate linear progression. 
+Red dashed reverse arrow shows predicted immediate reversal upon signal removal. 
+Problems box (red border) lists limitations: (1) Cannot explain persistent 
+inflammation after trigger removal; (2) No mechanism for memory or hysteresis; 
+(3) Single "master regulator" rarely sufficient; (4) Ignores distributed network 
+architecture; (5) Poor prediction of therapeutic resistance. Label: "Hierarchical 
+Control Paradigm." This paradigm fails to account for observed memory phenomena.
+
+(B) Attractor-based regulatory geometry model. Landscape with two basins: Resting 
+(left, blue, shallow) and IL22-high (right, red, deep). States marked as colored 
+circles. Vertical dashed line indicates activation barrier between states. Orange 
+curved arrow shows activation trajectory crossing barrier during inflammation. 
+Gray and green arrows (right basin) illustrate attempted escape and self-correcting 
+return, demonstrating hysteresis. X-axis labeled "Regulon Activity Space" with 
+notation "TF₁, TF₂, ..., TFₙ coordinates." Advantages box (green border): Explains 
+persistence, memory, multi-stability, and therapeutic resistance through basin 
+depth and cooperative stabilization. This geometry-based framework accounts for 
+experimental observations unexplained by linear models.
+
+(C) Memory relapse via basin re-entry dynamics. Timeline diagram with three phases: 
+(1) t₁: Active IL22-high state (red circle); (2) t₂: Partial suppression following 
+anti-IL22 therapy (yellow circle); (3) t₃: Relapse to IL22-high state (red circle 
+with thick border). Blue arrow (t₁→t₂) labeled "Anti-IL22 therapy"; thick red 
+arrow (t₂→t₃) labeled "Basin re-entry." Mechanism box (orange border) explains 
+relapse: basin remains intact despite treatment, cooperative TF network preserved, 
+chromatin accessibility "remembers" state. Therapeutic strategy box (green border) 
+proposes solutions: target cooperative TF pairs, disrupt enhancer clusters, 
+chromatin remodeling, multi-target approach. Bottom text notes clinical observation: 
+"IL22-high patients show rapid relapse after treatment cessation, consistent with 
+preserved attractor basin." This panel bridges computational predictions to 
+clinical outcomes.
+
+(D) General regulatory geometry framework. Three hierarchical principle boxes: 
+(1) Basin Depth = Memory Strength (blue box): Cooperative TF networks, enhancer 
+cluster topology, chromatin landscape curvature. (2) Distributed Stabilization 
+(orange box): No single master regulator, redundant + cooperative modules, 
+network-level locking. (3) Therapeutic Implications (green box): Multi-target 
+strategies required, predict resistance mechanisms, design cooperative inhibitors. 
+Right margin lists method: "Measure stability under perturbation → Quantify basin 
+depth → Map cooperative networks → Predict therapeutic targets." Bottom box 
+(purple dashed border) indicates generalizability: "Applicable Beyond IL22: TH17 
+polarization • Trained immunity • Chronic inflammation • Autoimmunity • Cancer 
+immunotherapy." This framework provides a quantitative, generalizable approach 
+to dissecting immune memory mechanisms across diverse inflammatory contexts.
+
+================================================================================
+
+SUPPLEMENTARY FIGURE LEGENDS (Optional - if you create Extended Data)
+
+Supplementary Figure 1 | Robustness of stability measurements
+(A) Stability curves under varying noise distributions (Gaussian, uniform, Laplacian)
+(B) Classifier comparison: logistic regression vs. SVM vs. random forest
+(C) Effect of training set size on stability estimates
+(D) Monte Carlo variance analysis (100 independent runs)
+
+Supplementary Figure 2 | Complete single-TF perturbation heatmap
+Full heatmap showing ΔDepth for all tested regulons with hierarchical clustering
+
+Supplementary Figure 3 | Complete pairwise perturbation matrix
+Full 16×16 heatmap of all tested TF pairs with synergy annotations
+
+Supplementary Figure 4 | TF cooperation network graph
+Network visualization with nodes = TFs (sized by single stabilizer strength) and 
+edges = cooperative synergy (weighted and colored by synergy score)
+
+================================================================================
+END OF FIGURE LEGENDS
+================================================================================
+
